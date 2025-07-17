@@ -11,8 +11,8 @@
 <body>
     <nav class="bg-green-100 p-3 flex justify-between items-center shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
         <ul class=" gap-5 text-grey-600 hidden md:flex ">
@@ -27,12 +27,29 @@
             </li>
         </ul>
     </nav>
-    <div class="text-center mt-7">
-        <h1 class="font-bold text-3xl">Our Products</h1>
-        <input type="text" placeholder="Search for a Product..." class="border border-black h-10 p-3 mt-4"
-            style="width:80%;">
+    <div id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000"
+        style="width:50%;height:100%;right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class=" flex flex-col gap-10 items-center text-grey-600  ">
+            <li>
+                <a class="hover:underline hover:text-black" href="">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline  hover:text-black" href="product.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline  hover:text-black" href="contact.html">Contacts</a>
+            </li>
+        </ul>
     </div>
-    <div class="grid grid-cols-4 m-5 gap-4  rounded">
+    <section class="p-4 text-center">
+
+        <h1 class="font-bold mt-5 text-3xl">Our Products</h1>
+        <input id="search" type="text" placeholder="Search for a Product..." class="border border-black h-10 p-3 mt-4"
+            style="width:80%;">
+    <div id="productcontainer" class="grid grid-cols-4 m-5 gap-4  rounded">
         <div class="text-center"><img src="images/product1.jpg" alt="product1" class="h-52 w-80 rounded">
             <h2>Rose plant</h2>
             <p>$30</p>
@@ -40,37 +57,39 @@
         <div class="text-center"><img src="images/product2.jpg" alt="product2" class="h-52 w-80 rounded">
             <h2>Lilly Plant</h2>
             <p>$30</p>
-        </div> 
-    <div class="text-center"><img src="images/product3.jpg" alt="product3" class="h-52 w-80 rounded">
-        <h2>Hibiscus rose</h2>
-        <p>$30</p>
+        </div>
+        <div class="text-center"><img src="images/product3.jpg" alt="product3" class="h-52 w-80 rounded">
+            <h2>Hibiscus rose</h2>
+            <p>$30</p>
+        </div>
+        <div class="text-center"><img src="images/product4.jpg" alt="product4" class="h-52 w-80 rounded">
+            <h2>New pet plant</h2>
+            <p>$30</p>
+        </div>
+        <div class="text-center"><img src="images/product5.jpg" alt="product5" class="h-52 w-80 rounded">
+            <h2>Rose plant</h2>
+            <p>$30</p>
+        </div>
+        <div class="text-center"><img src="images/product6.jpg" alt="product6" class="h-52 w-80 rounded">
+            <h2>Lilly plant</h2>
+            <p>$30</p>
+        </div>
+        <div class="text-center"><img src="images/product7.jpg" alt="product7" class="h-52 w-80 rounded">
+            <h2>Hibiscus rose</h2>
+            <p>$30</p>
+        </div>
+        <div class="text-center"><img src="images/product8.jpg" alt="product8" class="h-52 w-80 rounded">
+            <h2>New pet plant</h2>
+            <p>$30</p>
+        </div>
     </div>
-    <div class="text-center"><img src="images/product4.jpg" alt="product4" class="h-52 w-80 rounded">
-        <h2>New pet plant</h2>
-        <p>$30</p>
-    </div>
-    <div class="text-center"><img src="images/product5.jpg" alt="product5" class="h-52 w-80 rounded">
-        <h2>Rose plant</h2>
-        <p>$30</p>
-    </div>
-    <div class="text-center"><img src="images/product6.jpg" alt="product6" class="h-52 w-80 rounded">
-        <h2>Lilly plant</h2>
-        <p>$30</p>
-    </div>
-    <div class="text-center"><img src="images/product7.jpg" alt="product7" class="h-52 w-80 rounded">
-        <h2>Hibiscus rose</h2>
-        <p>$30</p>
-    </div>
-    <div class="text-center"><img src="images/product8.jpg" alt="product8" class="h-52 w-80 rounded">
-        <h2>New pet plant</h2>
-        <p>$30</p>
-    </div>
-    </div>
-     <section class="bg-green-100 p-4 h-40 mt-7">
+</section>
+    <section class="bg-green-100 p-4 h-40 mt-7">
         <h1 class="font-bold text-2xl mt-3">Greenden</h1>
         <p class="mt-3">The Standard plant website and responsive for all devices</p>
         <p class="mt-3">&copy; Greenday.com</p>
     </section>
+    <script src="product.js"></script>
 
 </body>
 
